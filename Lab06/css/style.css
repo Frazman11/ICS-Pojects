@@ -1,0 +1,323 @@
+h1, h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-size: 0.93rem;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+}
+
+.bg-colored{
+    background-color: rgba(80,145,163,0.95);
+    color:#ffffff;
+
+}
+section{
+    padding-top: 10rem;
+}
+/* general container */
+.container{
+    display:flex; /*format all children using flex box */
+    flex-direction: column; /*orient trhe children in a horizontal row*/
+    align-items: center; /*vertical alignmnet*/
+    justify-content: center;
+    margin:auto;
+    overflow:hidden;
+    text-align: center;
+    width:80%;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+header{
+    border-bottom: 3px solid #cf69d6;
+    padding: 15px 0;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+header li{
+    padding:0 20px; /*seperate menu items*/
+}
+header h1{
+    margin: 0;
+    font-weight: normal;
+} 
+header h1 .highlight, header .current a {
+    color:#d983df;
+}
+header nav{
+    margin-left: auto; /*push this element to the right*/
+    margin-right: auto;
+}
+header nav ul{
+    list-style: none; /*remove the bullets*/
+    display:flex;
+    flex-direction: row; /*orient the children in a horizontal row*/
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+nav a:hover{
+    color:#d983df;
+}
+section#showcase {
+    min-height: 400px;
+    background-image:url('../images/bakery-hero-image-1920.jpg');
+    background-size: cover;
+    background-position: center; /*position the background to the center of the block*/
+    text-align: center;
+    color:#ffffff;
+    display: flex;
+    flex-direction: row;
+}
+section#showcase .showcase-inner{
+    display:block;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(rgba(214, 93, 177, 0.4), rgba(0,0,0,0.3));
+    display:flex;
+    flex-direction:row;
+}
+section#showcase .container{
+    flex-direction: column;
+}
+section#showcase h2{
+    font-size: 4em;
+    font-weight: normal;
+    text-shadow: 0px 0px 30px #444;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+section#showcase p{
+    font-size: 1.25rem;
+}
+section#newsletter {
+    padding: 15px ;
+       
+}
+section#newsletter input{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+section#newsletter form{
+    margin-left: auto; /*push the form to the right*/
+    margin-right: auto;
+}
+.button-1{
+    height: 38px;
+    background-color: rgba(217,131,223);
+    border: none;
+    padding: 0 20px;
+    color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.3);
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+.button-1:hover{
+    background-color: rgb(205,90,213);
+}
+
+section#boxes{
+    margin-top:20px;
+    background-image: url('../images/flour-medium-trans30.png'); /*added flour background and removed background of png icons*/
+    background-position: center;
+    background-size:cover;
+    
+}
+section#boxes .box{
+    padding: 10px;
+    text-align: center;
+}
+section#boxes .box img{
+    width: 90px;
+}
+
+section#content{
+    margin-top:20px;
+    background-image: url('../images/flour-medium-trans30.png'); /*added flour background and removed background of png icons*/
+    background-position: center;
+    background-size:cover;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    
+    
+    
+}
+
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    text-align:center;
+    background-color: #d983df
+    ;
+}
+
+
+
+
+section#content .box{
+    width: auto;
+    background-color: rgba(214, 93, 177, 0.4);
+    margin-top: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+section#content .container{
+    align-items: start; /* in flexbox top = starrt and bottom = end */
+    text-align: left;
+    margin: 1rem auto;
+    
+}
+aside{
+    padding: 0 1rem 1rem 1rem; /*add padding to the column but not to the TOP*/
+    margin-top: 10px;  /* added some top margin to move about us box away from top edge, looks better with shadow*/
+    margin-left: 0; /* seperate thhe content horizontally*/
+    margin-right: 10px; /* added some margin so glow is visible*/
+    border-radius: 5px; /*round those edges*/
+    box-shadow: 0px 0px 5px 3px white;
+
+}
+
+section#content .container button{
+    height: 38px;
+    background-color: rgba(217,131,223,1);
+    border: none;
+    padding: 0 20px;
+    color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.3);
+    margin-bottom:5px
+}
+section#content .container button:hover{
+    background-color: rgb(205,90,213);
+}
+
+textarea{
+    max-width: 200px;
+}
+@media(min-width:768px){
+    /*restore showcase h1 height*/
+    section#showcase h2{
+        font-size: 6rem;
+    }
+    /*restore width based on text area cols*/
+    textarea{
+        max-width: inherit;
+    }
+    /*tell felx elements to stack side-by-side in rows*/
+    .container{
+        flex-direction:row;
+    }
+    /*stop newsletter from centering and instead align to the right*/
+    section#newsletter form{
+        margin-right: 0;
+    }
+    /*give the aside some left whitespace*/
+    aside{
+        margin-left: 3rem;
+    }
+}
+.box .fa-birthday-cake{
+    font-size: 5em;
+    color:#d983df
+}
+.box .fa-ring{
+    font-size: 5em;
+    color:#d983df
+}
+.box .fa-coins{
+    font-size: 5em;
+    color:#d983df
+}
+
+/*HAMBURGER MENU STUFF*/
+
+/*reset the header container so that our mobile menu can go full width */
+header .container {width:100%;}
+header .container #branding {width:100%}
+
+/*mobile menu needs to go full width and be aligned to center*/
+nav {
+    text-align: center;
+    line-height: 70px;
+    width: 100%;
+}
+/*menu should be hidden on mobile */
+    header nav ul {
+    display:none;
+}
+/*make the mobile menu have a bottom border (because they will be arranged vertically*/
+nav ul a{
+    display: block;
+    border-top: 1px solid #EAEAEB;
+    margin: 0px;
+}
+/*hide the chekcbox element that stores the state of the menu */
+#toggle{
+    display: none;
+}
+/*if the toggle checkbox is checked , show the menu (ul) */
+#toggle:checked ~ ul {
+    display: block;
+}
+/*override the padding that was applied in lab06   */
+header li{
+    padding: 0px;
+}
+/* suck up the bottom of the header by 15px, so it looks like the menu doesnt have extra margin */
+header nav ul{margin-bottom: -15px}
+
+/*style the hamburger element*/
+nav label{font-size: 26px}
+
+/*sewt the styles for the non-mobile menu*/
+@media only screen and ( min-width:768px ){
+/* make the new nav block size automatically rather than 100%*/
+    
+    nav{width:auto;}
+    nav label { display:none }
+
+/*snug the nav bar up to the right edge*/
+    header nav{ margin-right: 0px }
+
+/*make the menu horizontal again */
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+/*undo the mobile menu styling */
+    nav ul a{
+        border-top: 0px;
+        margin: 0px;
+        padding: 0 10px; /* need only a bit of padding for small tablets ion portrait mode*/
+    }
+    header nav ul {margin-bottom: 0px;}
+/*expand out the header to almost full width */
+    header .container {width: 95%}
+    header .container #branding { width: auto}
+}
+
+@media only screen and (min-width: 1000px){
+
+/*add some more padding for the links on large tablets/desktop*/
+nav ul a{
+    padding: 0 20px;
+}
+
+/*restore the header container width */
+header .container {width: 80%}
+}

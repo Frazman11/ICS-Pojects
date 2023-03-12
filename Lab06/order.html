@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="TASTY Bakery Description Goes Here">
+        <meta name="keywords" content="doughnuts, macarons, croissants, macarons, doughnuts">
+        <meta name="author" content="Frazer Dyson">
+        <title>Order</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <header class="bg-colored">
+            <div class="container">
+                <div id="branding">
+                    <h1><span class="highlight">TASTY </span>Bakery</h1>
+                </div>
+                <nav>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li ><a href="about.html">About</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li ><a href="catering.html">Catering</a></li>
+                        <li class="current"><a href="order.html">Order</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <section id="newsletter" class="bg-colored">
+            <div class="container">
+                <h3>Subscribe to our Newsletter</h3>
+                <form>
+                    <input type="email" name="email_address" placeholder="Enter Email..." required>
+                    <button type="submit" name="subscribe" class="button-1">Subscribe</button>
+                </form>
+            </div>
+        </section>
+       
+        <section id="content">
+            <div class="container">
+                <main>
+                    <h1 class="page-title">Order Form</h1>
+                    <p>Please fill in the form below. Payment is made at time of delivery or pickup.</p>
+                <form action="https://118.ics.devnich.ca/submit-form/" method="post">
+                        <div>
+                            <label for="first-name">First Name:</label> 
+                            <input autofocus="" id="first-name" name="first_name" placeholder="First Name" required="" type="text">
+                            <label for="last-name">Last Name:</label>
+                            <input id="last-name" name="last_name" placeholder="Last Name" required="" type="text">
+                        </div>
+                        <div></div>
+                        <div>
+                            <label for="email-address">Email Address:</label> <input id="email-address" name="email_address" placeholder="Enter Email" required="" type="email">
+                        </div>
+                        <div>
+                            <label for="phone-number">Phone Number:</label> <input id="phone-number" name="phone_number" placeholder="Phone Number" required="" type="tel">
+                        </div>
+                        <div>
+                            <h3>Delivery Details</h3><label for="via">Via</label> <select id="via" name="via">
+                                <option selected="selected" value="curbside-pickup">
+                                    Curbside Pickup
+                                </option>
+                                <option value="pickup-in-store">
+                                    Pickup In Store
+                                </option>
+                                <option value="deliver-via-courier">
+                                    Deliver Via Courier ($25 Charge)    
+                                </option>
+                            </select>
+                        </div>
+                        <h3>Order Items</h3>
+                        <div>
+                            <input id="macarons" name="order_items[]" type="checkbox" value="macarons"> 
+                            <label for="macarons">Macarons ($2 each)</label> 
+                            <select name="macaron_type">
+                                
+                                <option value="assorted">
+                                    Assorted
+                                </option>
+                                <option value="orange">
+                                    Orange
+                                </option>
+                                <option value="strawberry">
+                                    Strawberry
+                                </option>
+                                <option value="raspberry">
+                                    Raspberry
+                                </option>
+                            </select> <input min="0" name="macarons_quantity" placeholder="Quantity" type="number">
+                        </div>
+                        <div>
+                            <input id="doughnuts" name="order_items[]" type="checkbox" value="doughnuts"> 
+                            <label for="doughnuts">Doughnuts ($3 each)</label> 
+                            <select name="dougnut_types">
+                                <option value="assorted">
+                                    Assorted
+                                </option>
+                                <option value="honey-glazed">
+                                    Honey Glazed
+                                </option>
+                                <option value="chocolate">
+                                    Chocolate
+                                </option>
+                                <option value="old-fashioned">
+                                    Old Fashioned
+                                </option>
+                            </select> <input min="0" name="doughnuts_quantity" placeholder="Quantity" type="number">
+                        </div>
+                        <div>
+                            <input id="croissants" name="order_items[]" type="checkbox" value="croissants"> 
+                            <label for="croissants">Croissants ($3 each)</label> 
+                            <select name="croissant_types">
+                                
+                                <option value="traditional">
+                                    Traditional
+                                </option>
+                                <option value="chocolate">
+                                    Chocolate
+                                </option>
+                                <option value="almond">
+                                    Almond
+                                </option>
+                                <option value="assorted">
+                                    Assorted
+                                </option>
+                            </select> <input min="0" name="croissants_quantity" placeholder="Quantity" type="number">
+                        </div>
+                        <div>
+                            <h3>Payment Type</h3>
+                            <div>
+                                <input checked id="debit" name="payment_type" type="radio" value="debit"> 
+                                <label for="debit">Debit</label>
+                            </div>
+                            <div>
+                                <input id="cash" name="payment_type" type="radio" value="cash"> 
+                                <label for="cash">Cash</label>
+                            </div>
+                            <div>
+                                <input id="credit-card" name="payment_type" type="radio" value="credit-card"> 
+                                <label for="credit-card">Credit Card</label>
+                            </div>
+                        </div>
+                        <div>
+                            <h2>Order Instructions</h2><label for="order-instructions">If you have a preference for any of the aboves ordered items, please specify below.</label><br> 
+                            <textarea cols="60" id="order-instructions" name="order_instructions" placeholder="Enter Comments Here" rows="5"></textarea>
+                        </div><button type="submit">Place Order Now</button>
+                    </form>
+                    
+                    
+                </main>
+                
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; 2022 - TASTY Bakery</p>
+            </div>
+        </footer>
+    </body>
+</html>
