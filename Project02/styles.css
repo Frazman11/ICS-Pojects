@@ -1,0 +1,78 @@
+:root{
+    --dgreen: #2E4F4F;
+    --bluegreen: #0E8388;
+    --darkteal: #4B6D72;
+    --lightblue: #CBE4DE;
+    --bg: #faf7f2;
+    --tan: #d9b08c;
+    --tang: #D9A87C;
+    --grey: #d3d3d3;
+    --grey1: #C0C0C0;
+    --tang1: #B3A08F ;
+    --beige: #D7C1A6 ;
+}
+
+                                                /*SHOWCASE*/
+/*Different Background files for each category, mobile, tablet, small desktop large desktop*/
+@media only screen and (min-width:0px) and (max-width:450px)  {
+    section#showcase{
+        background-image: url('../images/showcase1-750.png');   /*750 px wide was the lowest i could go without it becoming too blurry. Original file was 4000px wide*/
+        background-position: center top;
+    }
+    section#showcase h2{
+        font-size: 2em; /*scale down the ICSfor small phones. Too chunky*/
+}
+}
+@media only screen and (max-width:1050px) and (min-width:450px) {
+    section#showcase{
+        background-image: url('../images/showcase1-1050.png');
+    }
+    section#showcase h2{
+        font-size: 3em;
+}
+}
+@media only screen and (max-width:1200px) and (min-width:1050px) {
+    section#showcase{
+    background-image: url('../images/showcase1-1200.png');
+}
+section#showcase h2{
+    font-size: 3em;
+}
+}
+@media only screen and (min-width:1200px){
+    section#showcase{
+    background-image: url('../images/showcase1-2000.png');
+}
+
+section#showcase h1,h2{ 
+    color: white;
+}
+section#showcase h2.display-2{
+    text-transform: uppercase;
+    
+}
+.navbar-brand{
+    color: var(--darkteal);
+
+}
+.navbar-dark {
+    --bs-navbar-color: var(--bluegreen);
+    --bs-navbar-hover-color: var(--darkteal);
+}
+.btn-primary{
+    --bs-btn-bg: var(--bluegreen);
+    --bs-btn-border-color: var(--beige);
+    --bs-btn-hover-color: var(--darkteal);
+}
+.navbar-dark{
+--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.menuburger{
+    color: white;
+}
+section#skills h2{
+    color: black;
+}
+section#skills #skills div.col{
+    background-color: #2E4F4F;
+}
