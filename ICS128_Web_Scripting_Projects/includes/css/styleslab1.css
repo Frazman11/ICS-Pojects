@@ -1,0 +1,10 @@
+.myClass{
+    display: table-row;
+    vertical-align: inherit;
+    
+    background-color: #2c3034;
+}
+.myClass td {
+    padding: 8px;
+    /* background-color: #2c3034; */
+}

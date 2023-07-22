@@ -1,0 +1,90 @@
+div.container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 2%;
+    background-color: #cf6826;
+    border-radius: 10px;
+    
+}
+div.container img{
+    display: flex;
+    padding: 2%;
+    width: 70%;
+    align-self: center;
+}
+div.input{
+    display: flex ;
+    width: 100%;
+}
+div.input input{
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+}
+div.input button, button#submit2{
+    background-color: yellow;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 10%;
+}
+p#errorIntro{
+    color: yellow;
+}
+div.container div.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed white;
+    margin: 0px;
+}
+div.container div.title p{
+    margin: 1%;
+}
+p#answer{
+    display: none;
+    
+
+}
+p#hint {
+    display: inline-block;
+    padding: 10px;
+    /* border: 1px black solid; */
+
+    
+  }
+div#hintcontainer{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+    padding: 10px;
+}
+p#score1{
+    color: greenyellow;
+    font-weight: bold;
+}
+p#resultsScore, p#resultsName{
+    color: red;
+    font-weight: bold;
+    background-color: yellow;
+}
+p#time{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+div.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+
